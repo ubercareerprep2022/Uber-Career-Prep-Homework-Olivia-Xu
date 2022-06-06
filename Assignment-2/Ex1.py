@@ -9,17 +9,15 @@ class Tree:
         self.root = root
 
 def printTree(tree=None):
-    if not tree: 
+    if not tree or not tree.root: 
         print()
         return
 
     def printTreeHelper(treeNode):
-        if not treeNode.left and not treeNode.right:
-            print(treeNode.data, ' ', end='')
-        else:
-            printTreeHelper(treeNode.left)
-            print(treeNode.data, ' ', end='')
-            printTreeHelper(treeNode.right)
+        if not treeNode: return
+        printTreeHelper(treeNode.left)
+        print(treeNode.data, ' ', end='')
+        printTreeHelper(treeNode.right)
         
 
     printTreeHelper(tree.root)
