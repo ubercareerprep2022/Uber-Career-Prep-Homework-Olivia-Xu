@@ -49,7 +49,7 @@ class LinkedList:
         self.list_size += 1
 
     def remove(self, index):
-        if index > self.list_size - 1 or index < 0: return
+        if index > self.list_size - 1 or index < 0: return 
         if index == 0:
             self.first = self.first.next
             self.list_size -= 1

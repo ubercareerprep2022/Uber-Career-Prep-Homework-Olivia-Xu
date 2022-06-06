@@ -115,7 +115,7 @@ class Queue:
             self.queue_rear = new
         self.queue_size += 1
 
-    def dequeue(self):
+    def dequeue(self): # what if there's only one node
         if self.isEmpty():
             print('No element to return, queue is empty')
             return None
