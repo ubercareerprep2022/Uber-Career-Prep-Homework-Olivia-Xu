@@ -122,6 +122,8 @@ class Queue:
         else:
             popped = self.queue_front
             self.queue_front = popped.next
+            if self.queue_size == 1:
+                self.queue_rear = None
             popped.next = None
             self.queue_size -= 1
             return popped.val
